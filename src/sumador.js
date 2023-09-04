@@ -9,6 +9,9 @@ function mover(m) {
 
 if(m == "D") 
   auto.direccion = "E";
+
+if(m == "I")
+  auto.direccion = "O";
 return auto.posx.toString() + ',' + auto.posy.toString() + auto.direccion
 }
 
