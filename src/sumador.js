@@ -1,13 +1,15 @@
 var auto = {
-  dieccion: "N",
+  direccion: "N",
   posx: 0,
   posy: 0
 }
 function mover(m) {
-if(m == "N"){
+  if(m == "A")
   auto.posy = auto.posy + 1;
-}
-return auto.posx.toString() + ',' + auto.posy.toString() + auto.dieccion
+
+if(m == "D") 
+  auto.direccion = "E";
+return auto.posx.toString() + ',' + auto.posy.toString() + auto.direccion
 }
 
 
