@@ -6,11 +6,14 @@ class Auto {
 }
 Direcciones(movimiento){
   if(movimiento == "A"){
-    if(Auto.direccion = "N"){
+    if(Auto.direccion == "N"){
       Auto.posy = Auto.posy + 1;
     }
     else if(Auto.direccion == "E"){
       Auto.posx = Auto.posx + 1;
+    }
+    else if(Auto.direccion == "O"){
+      Auto.posx = Auto.posx - 1;
     }
   }
   if(movimiento == "D"){ 

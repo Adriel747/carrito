@@ -26,4 +26,7 @@ describe("Clase Mover Auto", () =>{
   it("deberia de moverse varios espacios al este", () =>{
     expect(auto.mover("ADAA")).toEqual("2,1E")
   })
+  it("deberia de moverse varios espacios al oeste", () =>{
+    expect(auto.mover("AIAA")).toEqual("-2,1O")
+  })
   });
