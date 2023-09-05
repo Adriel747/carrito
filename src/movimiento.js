@@ -5,6 +5,7 @@ class Auto {
     Auto.posy = 0;
 }
 Direcciones(movimiento){
+  let orientacion = ["O", "N", "E", "S"]
   if(movimiento == "A"){
     if(Auto.direccion == "N"){
       Auto.posy = Auto.posy + 1;
@@ -15,12 +16,17 @@ Direcciones(movimiento){
     else if(Auto.direccion == "O"){
       Auto.posx = Auto.posx - 1;
     }
+    else if(Auto.direccion == "S"){
+      Auto.posy = Auto.posy - 1;
+    }
   }
   if(movimiento == "D"){ 
-    Auto.direccion = "E";
+    let cambio = orientacion.indexOf(Auto.direccion)
+    Auto.direccion = orientacion[cambio + 1];
   }
   if(movimiento == "I"){
-    Auto.direccion = "O";
+    let cambio = orientacion.indexOf(Auto.direccion)
+    Auto.direccion = orientacion[cambio - 1];
   }
 }
  mover(movimiento) {
