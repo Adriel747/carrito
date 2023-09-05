@@ -4,28 +4,33 @@ class Auto {
     Auto.posx = 0;
     Auto.posy = 0;
 }
+Guia(orientacion){
+  if(orientacion == "N"){
+    Auto.posy += 1;
+  }
+  else if(orientacion == "S"){
+    Auto.posy -= 1;
+  }
+  else if(orientacion == "E"){
+    Auto.posx += 1;
+  }
+  else if(orientacion == "O"){
+    Auto.posx -= 1;
+  }
+}
 Direcciones(movimiento){
   let orientacion = ["O", "N", "E", "S"]
   if(movimiento == "A"){
-    if(Auto.direccion == "N"){
-      Auto.posy = Auto.posy + 1;
-    }
-    else if(Auto.direccion == "E"){
-      Auto.posx = Auto.posx + 1;
-    }
-    else if(Auto.direccion == "O"){
-      Auto.posx = Auto.posx - 1;
-    }
-    else if(Auto.direccion == "S"){
-      Auto.posy = Auto.posy - 1;
-    }
+   this.Guia(Auto.direccion)
   }
   if(movimiento == "D"){ 
     let cambio = orientacion.indexOf(Auto.direccion)
+    if(cambio == 3){cambio = -1;}
     Auto.direccion = orientacion[cambio + 1];
   }
   if(movimiento == "I"){
     let cambio = orientacion.indexOf(Auto.direccion)
+    if(cambio == 0){cambio = 4;}
     Auto.direccion = orientacion[cambio - 1];
   }
 }
