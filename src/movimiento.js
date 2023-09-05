@@ -37,6 +37,9 @@ Direcciones(movimiento){
  mover(movimiento) {
   for(let i=0; i<movimiento.length; i++){
     this.Direcciones(movimiento[i])
+    if(Auto.posy < 0 || Auto.posx < 0 || Auto.posy > 9 || Auto.posx > 9){
+      return "FUERA DEL MAPA"
+    }
   }
  return Auto.posx.toString() + ',' + Auto.posy.toString() + Auto.direccion
 }
